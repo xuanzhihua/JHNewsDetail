@@ -16,9 +16,9 @@ class DetailCell: UICollectionViewCell {
     var listM: JHImgModel? {
         
         didSet {
-            let url = NSURL(string: listM?.pic_url ?? "")
-            imageView.contentMode = .ScaleAspectFit
-            imageView.sd_setImageWithURL(url, placeholderImage: UIImage(named: "placehoder_picture"))
+            let url = URL(string: listM?.pic_url ?? "")
+            imageView.contentMode = .scaleAspectFit
+            imageView.sd_setImage(with: url, placeholderImage: UIImage(named: "placehoder_picture"))
         }
     }
 

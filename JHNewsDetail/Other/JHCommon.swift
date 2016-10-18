@@ -9,13 +9,13 @@
 import UIKit
 
 /// 屏幕大小
-let kScreenBounds = UIScreen.mainScreen().bounds
+let kScreenBounds = UIScreen.main.bounds
 
 /// 屏幕宽度
-let kScreenWidth: CGFloat = UIScreen.mainScreen().bounds.width
+let kScreenWidth: CGFloat = UIScreen.main.bounds.width
 
 /// 屏幕高度
-let kScreenHeight: CGFloat = UIScreen.mainScreen().bounds.height
+let kScreenHeight: CGFloat = UIScreen.main.bounds.height
 
 /// 全局的间距
 let kCommonMargin: CGFloat = 10

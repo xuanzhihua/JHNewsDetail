@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		1BA1E127C32292DA54E69B2B /* Pods_JHNewsDetail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57E6591A8B21BC3F122E92B5 /* Pods_JHNewsDetail.framework */; };
-		9D68ECFE1D9F859F00242289 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 9D68ECE51D9F859F00242289 /* index.html */; settings = {ASSET_TAGS = (); }; };
-		9D68ECFF1D9F859F00242289 /* newsDetail.css in Resources */ = {isa = PBXBuildFile; fileRef = 9D68ECE61D9F859F00242289 /* newsDetail.css */; settings = {ASSET_TAGS = (); }; };
-		9D68ED001D9F859F00242289 /* newsDetail.js in Resources */ = {isa = PBXBuildFile; fileRef = 9D68ECE71D9F859F00242289 /* newsDetail.js */; settings = {ASSET_TAGS = (); }; };
-		9D68ED011D9F859F00242289 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D68ECE91D9F859F00242289 /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		9D68ED021D9F859F00242289 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D68ECEB1D9F859F00242289 /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
-		9D68ED031D9F859F00242289 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D68ECEC1D9F859F00242289 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		9D68ED041D9F859F00242289 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D68ECED1D9F859F00242289 /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		9D68ED051D9F859F00242289 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D68ECEF1D9F859F00242289 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		9D68ED061D9F859F00242289 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D68ECF11D9F859F00242289 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
-		9D68ED071D9F859F00242289 /* JHCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D68ECF21D9F859F00242289 /* JHCommon.swift */; settings = {ASSET_TAGS = (); }; };
-		9D68ED081D9F859F00242289 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D68ECF51D9F859F00242289 /* DetailVC.swift */; settings = {ASSET_TAGS = (); }; };
-		9D68ED091D9F859F00242289 /* DetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D68ECF61D9F859F00242289 /* DetailVC.xib */; settings = {ASSET_TAGS = (); }; };
-		9D68ED0A1D9F859F00242289 /* DetailFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D68ECF81D9F859F00242289 /* DetailFlowLayout.swift */; settings = {ASSET_TAGS = (); }; };
-		9D68ED0B1D9F859F00242289 /* JHImgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D68ECFA1D9F859F00242289 /* JHImgModel.swift */; settings = {ASSET_TAGS = (); }; };
-		9D68ED0C1D9F859F00242289 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D68ECFC1D9F859F00242289 /* DetailCell.swift */; settings = {ASSET_TAGS = (); }; };
-		9D68ED0D1D9F859F00242289 /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D68ECFD1D9F859F00242289 /* DetailCell.xib */; settings = {ASSET_TAGS = (); }; };
+		9D68ECFE1D9F859F00242289 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 9D68ECE51D9F859F00242289 /* index.html */; };
+		9D68ECFF1D9F859F00242289 /* newsDetail.css in Resources */ = {isa = PBXBuildFile; fileRef = 9D68ECE61D9F859F00242289 /* newsDetail.css */; };
+		9D68ED001D9F859F00242289 /* newsDetail.js in Resources */ = {isa = PBXBuildFile; fileRef = 9D68ECE71D9F859F00242289 /* newsDetail.js */; };
+		9D68ED011D9F859F00242289 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D68ECE91D9F859F00242289 /* ViewController.swift */; };
+		9D68ED021D9F859F00242289 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D68ECEB1D9F859F00242289 /* AppDelegate.swift */; };
+		9D68ED031D9F859F00242289 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D68ECEC1D9F859F00242289 /* Assets.xcassets */; };
+		9D68ED041D9F859F00242289 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D68ECED1D9F859F00242289 /* LaunchScreen.storyboard */; };
+		9D68ED051D9F859F00242289 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D68ECEF1D9F859F00242289 /* Main.storyboard */; };
+		9D68ED061D9F859F00242289 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D68ECF11D9F859F00242289 /* Info.plist */; };
+		9D68ED071D9F859F00242289 /* JHCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D68ECF21D9F859F00242289 /* JHCommon.swift */; };
+		9D68ED081D9F859F00242289 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D68ECF51D9F859F00242289 /* DetailVC.swift */; };
+		9D68ED091D9F859F00242289 /* DetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D68ECF61D9F859F00242289 /* DetailVC.xib */; };
+		9D68ED0A1D9F859F00242289 /* DetailFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D68ECF81D9F859F00242289 /* DetailFlowLayout.swift */; };
+		9D68ED0B1D9F859F00242289 /* JHImgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D68ECFA1D9F859F00242289 /* JHImgModel.swift */; };
+		9D68ED0C1D9F859F00242289 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D68ECFC1D9F859F00242289 /* DetailCell.swift */; };
+		9D68ED0D1D9F859F00242289 /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D68ECFD1D9F859F00242289 /* DetailCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -217,6 +217,7 @@
 				TargetAttributes = {
 					9D68ECCE1D9F84E300242289 = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -285,7 +286,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D79BCEF8B432B104C3EBD9B1 /* [CP] Embed Pods Frameworks */ = {
@@ -434,6 +435,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SeeMyGo.JHNewsDetail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -446,6 +448,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SeeMyGo.JHNewsDetail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
