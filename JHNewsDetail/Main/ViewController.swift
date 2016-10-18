@@ -25,16 +25,24 @@ class ViewController: UIViewController,UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let indexPath = NSBundle.mainBundle().URLForResource("index", withExtension: "html")
-        let request = NSURLRequest(URL: indexPath!)
+        let indexPath = Bundle.main.url(forResource: "index", withExtension: "html")
+        let request = URLRequest(url: indexPath!)
         self.webView.loadRequest(request)
         
         self.bridge?.setWebViewDelegate(self)
-        self.bridge = WebViewJavascriptBridge(forWebView: self.webView)
+        self.bridge = WebViewJavascriptBridge(for: self.webView)
         WebViewJavascriptBridge.enableLogging()
         
         self.bridge?.registerHandler("openCameraLib", handler: { (data, responseCallback) -> Void in
-            let srcArr = data["srcArr"] as! [[String: AnyObject]]
+            
+            guard let dataDic = data as? [String: AnyObject] else {
+                print("data不是字典类型")
+                return
+            }
+            guard let srcArr = dataDic["srcArr"] as? [[String: AnyObject]] else {
+                print("dataDic[srcArr],取值失败,或者不是数组字典类型")
+                return
+            }
             var listMS = [JHImgModel]()
             for i in 0..<srcArr.count {
                 let src = srcArr[i]
@@ -46,10 +54,10 @@ class ViewController: UIViewController,UIWebViewDelegate {
             let detailVC = DetailVC()
             self.detailVC = detailVC
             detailVC.listMs = listMS
-            detailVC.scrollToRow = data["index"] as! Int
-            detailVC.modalPresentationStyle = .Custom
+            detailVC.scrollToRow = dataDic["index"] as! Int
+            detailVC.modalPresentationStyle = .custom
             
-            self.presentViewController(detailVC, animated: true, completion: nil)
+            self.present(detailVC, animated: true, completion: nil)
 
         })
     }
@@ -61,27 +69,27 @@ class ViewController: UIViewController,UIWebViewDelegate {
 extension ViewController{
     
     // 全局换肤课通过appearance统一设置，这里只处理局部
-    @IBAction func changeSwState(sender: UISwitch) {
-        if sender.on {
+    @IBAction func changeSwState(_ sender: UISwitch) {
+        if sender.isOn {
             
             sender.setOn(true, animated: true)
-            self.bottomView.backgroundColor = UIColor.blackColor()
-            self.leftTitle.textColor = UIColor.redColor()
-            self.rightTitle.setTitleColor(UIColor.redColor(), forState:.Normal)
-            self.navigationController?.navigationBar.barTintColor = UIColor.blackColor()
-            self.navigationController?.navigationBar.backgroundColor =  UIColor.blackColor()
-            self.navigationController?.navigationBar.titleTextAttributes = NSDictionary(object: UIColor.redColor(), forKey: NSForegroundColorAttributeName) as? [String : AnyObject]
+            self.bottomView.backgroundColor = UIColor.black
+            self.leftTitle.textColor = UIColor.red
+            self.rightTitle.setTitleColor(UIColor.red, for:UIControlState())
+            self.navigationController?.navigationBar.barTintColor = UIColor.black
+            self.navigationController?.navigationBar.backgroundColor =  UIColor.black
+            self.navigationController?.navigationBar.titleTextAttributes = NSDictionary(object: UIColor.red, forKey: NSForegroundColorAttributeName as NSCopying) as? [String : AnyObject]
             isLight = true
             
         }else{
             
             sender.setOn(false, animated: true)
-            self.bottomView.backgroundColor = UIColor.groupTableViewBackgroundColor()
-            self.leftTitle.textColor = UIColor.blackColor()
-            self.rightTitle.setTitleColor(UIColor.blackColor(), forState:.Normal)
+            self.bottomView.backgroundColor = UIColor.groupTableViewBackground
+            self.leftTitle.textColor = UIColor.black
+            self.rightTitle.setTitleColor(UIColor.black, for:UIControlState())
             self.navigationController?.navigationBar.barTintColor = nil
-            self.navigationController?.navigationBar.backgroundColor =  UIColor.groupTableViewBackgroundColor()
-            self.navigationController?.navigationBar.titleTextAttributes = NSDictionary(object: UIColor.blackColor(), forKey: NSForegroundColorAttributeName) as? [String : AnyObject]
+            self.navigationController?.navigationBar.backgroundColor =  UIColor.groupTableViewBackground
+            self.navigationController?.navigationBar.titleTextAttributes = NSDictionary(object: UIColor.black, forKey: NSForegroundColorAttributeName as NSCopying) as? [String : AnyObject]
              isLight = false
         }
         
@@ -89,7 +97,7 @@ extension ViewController{
     }
     
     
-    @IBAction func changeFontSize(sender: UISlider) {
+    @IBAction func changeFontSize(_ sender: UISlider) {
         self.bridge?.callHandler("changeFontSize", data: sender.value)
     }
     

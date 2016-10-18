@@ -10,11 +10,11 @@ import UIKit
 
 class DetailFlowLayout: UICollectionViewFlowLayout {
     
-    override func prepareLayout() {
+    override func prepare() {
         itemSize = CGSize(width: kScreenWidth, height: kScreenHeight * 0.9)
-        scrollDirection = .Horizontal
+        scrollDirection = .horizontal
         minimumLineSpacing = kCommonMargin
-        collectionView?.pagingEnabled = true
+        collectionView?.isPagingEnabled = true
     }
     
 }

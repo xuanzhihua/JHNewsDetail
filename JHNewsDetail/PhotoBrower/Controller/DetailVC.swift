@@ -12,9 +12,9 @@ private let cellID = "detail"
 
 class DetailVC: UIViewController {
 
-    var currentIndexPath: NSIndexPath {
+    var currentIndexPath: IndexPath {
         get {
-            return collectionView.indexPathsForVisibleItems().first!
+            return collectionView.indexPathsForVisibleItems.first!
         }
     }
     
@@ -47,12 +47,12 @@ extension DetailVC {
         
         /// 注册cell
         let nib = UINib(nibName: "DetailCell", bundle: nil)
-        collectionView.registerNib(nib, forCellWithReuseIdentifier: cellID)
+        collectionView.register(nib, forCellWithReuseIdentifier: cellID)
         
-        let indexPath = NSIndexPath(forRow: scrollToRow, inSection: 0)
+        let indexPath = IndexPath(row: scrollToRow, section: 0)
         
         // atScrollPosition: cell与collectionView的对齐方式
-        collectionView.scrollToItemAtIndexPath(indexPath, atScrollPosition: .Left, animated: false)
+        collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
         
     }
     
@@ -60,13 +60,13 @@ extension DetailVC {
      关闭方法
      */
     @IBAction func close() {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func save() {
         
         
-        let cell = collectionView.cellForItemAtIndexPath(currentIndexPath) as! DetailCell
+        let cell = collectionView.cellForItem(at: currentIndexPath) as! DetailCell
         let image = cell.imageView.image
         
         UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
@@ -79,14 +79,14 @@ extension DetailVC {
 // MARK: - 数据源方法
 extension DetailVC: UICollectionViewDataSource {
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return listMs.count
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellID, forIndexPath: indexPath) as! DetailCell
-        cell.listM = listMs[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! DetailCell
+        cell.listM = listMs[(indexPath as NSIndexPath).row]
         return cell
     }
 }
